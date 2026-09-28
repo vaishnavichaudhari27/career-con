@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSmooth 2.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSmooth 2.5s ease-in-out 1.25s infinite;
+}

@@ -38,7 +38,7 @@ export const heroCarouselSlides = [
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://thumbs.dreamstime.com/b/group-businesspeople-having-meeting-office-lobby-overhead-view-discussion-37223778.jpg?w=992',
     tag: 'Trusted Nationwide',
     title: 'Proven Credibility for 12+ Years',
     description: 'Empowering ambitious professionals across Bengaluru, Hyderabad, Pune, Mumbai, Gurugram, Noida, and 24 other cities.',

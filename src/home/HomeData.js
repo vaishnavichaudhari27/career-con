@@ -6,7 +6,7 @@
 export const heroCarouselSlides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://media.istockphoto.com/id/1827291486/photo/a-dedicated-mentor-is-explaining-mentees-importance-of-project-while-sitting-at-the-boardroom.jpg?s=612x612&w=0&k=20&c=whMTmOCyOUfNqoNBe8GPlmcNUM-aCfqD-0whdFPQpO4=',
     tag: 'Career Growth & Advisory',
     title: 'Accelerate Your Next Career Milestone',
     description: '100% Genuine work experience certificates & professional documentation compliant with top MNC background verification.',

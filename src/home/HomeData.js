@@ -30,7 +30,7 @@ export const heroCarouselSlides = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://img.magnific.com/free-photo/business-meeting-office_1268-21523.jpg?semt=ais_hybrid&w=740&q=80',
     tag: 'Verification Shield',
     title: 'Telephonic & Official Email Verification',
     description: 'Active HR domain email verification and dedicated telephonic BGC response support across 30+ Indian commercial hubs.',

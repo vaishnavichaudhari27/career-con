@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './navbar/Navbar';
-import HeroSection from './home/HeroSection';
+import Home from './home/Home';
 import FloatingContacts from './components/FloatingContacts';
 import { LocationsPage } from './pages/PageViews';
 import heroBg from './assets/hero-bg.jpg';
@@ -29,14 +29,14 @@ export default function App() {
         {/* 3. Page Routes Content */}
         <main className="relative z-10 flex-1">
           <Routes>
-            <Route path="/" element={<HeroSection />} />
+            <Route path="/" element={<Home />} />
             {/* Why Us, Our Services, Blog, and Contact Us kept clean with only the background image */}
             <Route path="/why-us" element={null} />
             <Route path="/services/*" element={null} />
             <Route path="/location/*" element={<LocationsPage />} />
             <Route path="/blog" element={null} />
             <Route path="/contact" element={null} />
-            <Route path="*" element={<HeroSection />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
 

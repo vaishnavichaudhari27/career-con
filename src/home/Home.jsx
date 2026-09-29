@@ -187,20 +187,21 @@ export default function Home() {
       {/* ========================================================================= */}
       {/* 1. HERO SECTION (Left Carousel + Right Request Information Form)          */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[calc(100vh-105px)] flex items-center justify-center overflow-hidden py-10 lg:py-14 select-none">
+      <section className="relative w-full min-h-[calc(100vh-105px)] flex items-center justify-center overflow-hidden py-8 lg:py-12 select-none">
         <div className="absolute inset-0 bg-slate-950/40 backdrop-brightness-[0.88] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* LEFT SIDE: FULL BRIGHTNESS SEAMLESS CAROUSEL */}
+            {/* LEFT SIDE: FULL BRIGHTNESS SEAMLESS CAROUSEL (Full Images without cut off) */}
             <div
               className="lg:col-span-7 flex flex-col justify-center"
               onMouseEnter={() => setHeroPaused(true)}
               onMouseLeave={() => setHeroPaused(false)}
             >
               <div className="relative rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.85),0_0_35px_rgba(160,200,40,0.2)] border-2 border-white/35 bg-slate-950/90 backdrop-blur-xl group">
-                <div className="relative w-full h-[340px] sm:h-[420px] overflow-hidden">
+                {/* Generous Height matching the Form so images are fully visible */}
+                <div className="relative w-full h-[380px] sm:h-[460px] lg:h-[510px] overflow-hidden bg-slate-950">
                   <div
                     className={`flex w-full h-full ${
                       heroTransitioning
@@ -218,12 +219,14 @@ export default function Home() {
                         <img
                           src={slide.image}
                           alt={slide.title}
-                          className="w-full h-full object-cover brightness-110 contrast-105"
+                          className="w-full h-full object-cover object-center brightness-105 contrast-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-transparent" />
+                        {/* Smooth bottom gradient for title clarity */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
 
-                        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white z-20">
-                          <div className="flex items-center gap-2 mb-2.5">
+                        {/* Slide Caption Box */}
+                        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 text-white z-20">
+                          <div className="flex items-center gap-2 mb-2">
                             <span className="bg-[#a0c828] text-slate-950 text-[10px] sm:text-xs font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-md shadow-[#a0c828]/40">
                               {slide.tag}
                             </span>
@@ -232,11 +235,11 @@ export default function Home() {
                             </span>
                           </div>
 
-                          <h3 className="text-xl sm:text-3xl font-black tracking-tight text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                             {slide.title}
                           </h3>
 
-                          <p className="mt-2 text-xs sm:text-sm text-slate-100 line-clamp-2 leading-relaxed drop-shadow-[0_1px_5px_rgba(0,0,0,0.8)] font-medium">
+                          <p className="mt-1.5 text-xs sm:text-sm text-slate-100 line-clamp-2 leading-relaxed drop-shadow-[0_1px_5px_rgba(0,0,0,0.8)] font-medium">
                             {slide.description}
                           </p>
                         </div>
@@ -245,7 +248,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Carousel Controls */}
+                {/* Carousel Navigation Arrow Controls */}
                 <button
                   type="button"
                   onClick={handleHeroPrev}
@@ -267,6 +270,7 @@ export default function Home() {
                   </svg>
                 </button>
 
+                {/* Progress bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20 overflow-hidden">
                   <div
                     key={heroSlide}
@@ -276,6 +280,7 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Quick Trust Bar */}
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-white px-2 font-medium">
                 <span className="flex items-center gap-1.5 drop-shadow-sm">
                   <svg className="w-4 h-4 text-[#a0c828]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -474,9 +479,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             
-            {/* LEFT COLUMN: SMOOTH IMAGE CAROUSEL (6-7 IMAGES) */}
+            {/* LEFT COLUMN: FULL-FRAME SMOOTH CAROUSEL (NO DOTS, NO CUT OFF) */}
             <div
-              className="relative w-full h-[360px] sm:h-[400px] lg:h-[420px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900 group"
+              className="relative w-full h-[420px] sm:h-[450px] lg:h-[460px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900 group"
               onMouseEnter={() => setAboutPaused(true)}
               onMouseLeave={() => setAboutPaused(false)}
             >
@@ -491,7 +496,7 @@ export default function Home() {
                     <img
                       src={img.url}
                       alt={img.alt}
-                      className="w-full h-full object-cover brightness-100 contrast-105"
+                      className="w-full h-full object-cover object-center brightness-105 contrast-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
                     <div className="absolute bottom-4 left-4 right-4 z-20">
@@ -503,6 +508,7 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Navigation Arrows */}
               <button
                 type="button"
                 onClick={handleAboutPrev}
@@ -523,46 +529,32 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-
-              <div className="absolute bottom-2.5 right-3.5 z-20 flex items-center gap-1.5">
-                {aboutImages.map((_, dotIdx) => (
-                  <button
-                    key={dotIdx}
-                    type="button"
-                    onClick={() => setAboutSlide(dotIdx)}
-                    aria-label={`Go to slide ${dotIdx + 1}`}
-                    className={`transition-all duration-300 rounded-full cursor-pointer ${
-                      dotIdx === aboutSlide
-                        ? 'w-5 h-2 bg-[#a0c828]'
-                        : 'w-2 h-2 bg-white/60 hover:bg-white'
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
 
-            {/* CENTER COLUMN: TEXT CONTENT & READ MORE CTA */}
-            <div className="relative w-full h-[360px] sm:h-[400px] lg:h-[420px] rounded-2xl bg-white p-6 sm:p-8 flex flex-col justify-between items-center text-center shadow-lg border border-slate-200">
+            {/* CENTER COLUMN: TEXT CONTENT & READ MORE CTA (PERFECTLY FITTED INSIDE CARD) */}
+            <div className="relative w-full h-[420px] sm:h-[450px] lg:h-[460px] rounded-2xl bg-white p-6 sm:p-7 lg:p-8 flex flex-col justify-between items-center text-center shadow-lg border border-slate-200 overflow-hidden">
               <div className="flex flex-col items-center">
                 <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
                   <span className="text-slate-900">{aboutSectionData.headingPart1} </span>
                   <span className="text-[#a0c828] drop-shadow-xs">{aboutSectionData.headingPart2}</span>
                 </h2>
-                <div className="flex items-center justify-center gap-1 mt-3">
+                <div className="flex items-center justify-center gap-1 mt-2.5">
                   <div className="w-10 h-0.5 bg-[#a0c828]" />
                   <div className="w-2.5 h-2.5 rotate-45 border-2 border-[#a0c828] bg-white" />
                   <div className="w-10 h-0.5 bg-[#a0c828]" />
                 </div>
               </div>
 
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal px-1 sm:px-2 my-auto">
+              {/* Summary Text comfortably positioned */}
+              <p className="text-slate-600 text-xs sm:text-[13px] leading-relaxed font-normal px-1 my-auto">
                 {aboutSectionData.summaryText}
               </p>
 
-              <div className="pt-2">
+              {/* Read More Button - 100% inside card with comfortable spacing */}
+              <div className="pt-2 pb-1">
                 <Link
                   to={aboutSectionData.readMoreBtn.link}
-                  className="inline-flex items-center justify-center px-7 py-2.5 rounded-lg bg-[#a0c828] hover:bg-[#8eb322] active:scale-95 text-white font-bold text-sm shadow-md shadow-[#a0c828]/40 hover:shadow-lg hover:shadow-[#a0c828]/50 transition-all duration-200 cursor-pointer tracking-wide"
+                  className="inline-flex items-center justify-center px-8 py-2.5 rounded-lg bg-[#a0c828] hover:bg-[#8eb322] active:scale-95 text-white font-bold text-sm shadow-md shadow-[#a0c828]/40 hover:shadow-lg hover:shadow-[#a0c828]/50 transition-all duration-200 cursor-pointer tracking-wide"
                 >
                   {aboutSectionData.readMoreBtn.text}
                 </Link>
@@ -570,11 +562,11 @@ export default function Home() {
             </div>
 
             {/* RIGHT COLUMN: STATIC FEATURE IMAGE */}
-            <div className="relative w-full h-[360px] sm:h-[400px] lg:h-[420px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 group bg-slate-900">
+            <div className="relative w-full h-[420px] sm:h-[450px] lg:h-[460px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 group bg-slate-900">
               <img
                 src={aboutSectionData.staticFeature.imageUrl}
                 alt={aboutSectionData.staticFeature.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-slate-950/30" />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white z-10">
@@ -595,7 +587,7 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. OUR SERVICES SECTION: 3D Flip Cards with Dynamic Accent Colors         */}
+      {/* 4. OUR SERVICES SECTION: 3D Flip Cards (Uniform Size, Premium Colors)     */}
       {/* ========================================================================= */}
       <section className="relative w-full py-14 lg:py-20 bg-slate-950/90 text-white select-none overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:28px_28px] opacity-10 pointer-events-none" />
@@ -620,6 +612,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Equal Width & Height 3-Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             {servicesSectionData.cards.map((card) => {
               const isFlipped = activeFlippedCard === card.id;
@@ -627,7 +620,7 @@ export default function Home() {
               return (
                 <div
                   key={card.id}
-                  className="perspective-1000 group w-full h-[470px] sm:h-[490px] cursor-pointer"
+                  className="perspective-1000 group w-full h-[460px] sm:h-[480px] cursor-pointer"
                   onClick={() => toggleMobileFlip(card.id)}
                 >
                   <div
@@ -635,41 +628,40 @@ export default function Home() {
                       isFlipped ? 'rotate-y-180' : 'group-hover:rotate-y-180'
                     }`}
                   >
-                    {/* FRONT SIDE */}
+                    {/* FRONT SIDE (Executive Rich Deep Navy/Sapphire Color, Clean Header & Footer) */}
                     <div className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-900 flex flex-col">
-                      <div className="relative w-full h-[54%] overflow-hidden bg-slate-950">
+                      {/* Top 52%: Image with soft overlay */}
+                      <div className="relative w-full h-[52%] overflow-hidden bg-slate-950">
                         <img
                           src={card.frontImage}
                           alt={card.title}
-                          className="w-full h-full object-cover brightness-105 contrast-105 group-hover:scale-110 transition-transform duration-700"
+                          className="w-full h-full object-cover object-center brightness-105 contrast-105 group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20" />
-                        <div className="absolute top-3 right-3 bg-slate-950/70 backdrop-blur-md text-[10px] font-semibold text-white/90 px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1.5 shadow-sm">
-                          <span>Hover to 3D Flip</span>
-                          <svg className="w-3 h-3 text-[#a0c828] animate-spin" style={{ animationDuration: '6s' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                          </svg>
-                        </div>
                       </div>
 
-                      <div className="relative w-full h-[46%] bg-[#a0c828] p-5 sm:p-6 flex flex-col justify-between text-white border-t border-white/30">
-                        <div>
-                          <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-tight drop-shadow-sm">
-                            {card.title}
-                          </h3>
-                          <p className="mt-2 text-xs sm:text-[13px] text-white/95 leading-relaxed font-normal line-clamp-3">
-                            {card.frontDescription}
-                          </p>
-                        </div>
+                      {/* Bottom 48%: Executive Deep Navy/Slate Card Body (New Premium Color) */}
+                      <div
+                        className={`relative w-full h-[48%] bg-gradient-to-b ${card.frontGradient} p-6 sm:p-7 flex flex-col justify-center text-white border-t-2`}
+                        style={{ borderTopColor: `${card.frontAccentLine}60` }}
+                      >
+                        <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-tight drop-shadow-sm">
+                          {card.title}
+                        </h3>
 
-                        <div className="w-full pt-2 flex items-center justify-between border-t border-dashed border-white/40 text-[11px] font-bold text-slate-900/80">
-                          <span>Tap / Hover to View Full Specs</span>
-                          <span className="text-base leading-none">↻</span>
-                        </div>
+                        {/* Elegant Accent Line */}
+                        <div
+                          className="w-12 h-1 rounded-full my-2.5"
+                          style={{ backgroundColor: card.frontAccentLine }}
+                        />
+
+                        <p className="text-xs sm:text-[13px] text-slate-200 leading-relaxed font-normal">
+                          {card.frontDescription}
+                        </p>
                       </div>
                     </div>
 
-                    {/* BACK SIDE */}
+                    {/* BACK SIDE (Dynamic Accent Gradient with Read More Button) */}
                     <div
                       className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 p-6 sm:p-7 flex flex-col justify-between bg-gradient-to-br ${card.backAccentGradient}`}
                     >

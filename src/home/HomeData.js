@@ -86,7 +86,7 @@ export const aboutSectionData = {
   carouselImages: [
     {
       id: 1,
-      url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
+      url: 'https://thumbs.dreamstime.com/b/group-businesspeople-having-meeting-office-lobby-overhead-view-discussion-37223778.jpg?w=992',
       alt: 'Professional Career Counseling Session',
       caption: 'Expert Career Guidance & Corporate Mentorship',
     },

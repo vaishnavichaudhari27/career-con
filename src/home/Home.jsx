@@ -6,6 +6,7 @@ import {
   featuresBarData,
   aboutSectionData,
   servicesSectionData,
+  footerData,
 } from './homeData';
 
 // Extended slides with clone for infinite seamless carousel looping
@@ -640,9 +641,9 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20" />
                       </div>
 
-                      {/* Bottom 48%: Executive Deep Navy/Slate Card Body (New Premium Color) */}
+                      {/* Bottom 48%: Executive Deep Navy/Slate Card Body (Only Headline) */}
                       <div
-                        className={`relative w-full h-[48%] bg-gradient-to-b ${card.frontGradient} p-6 sm:p-7 flex flex-col justify-center text-white border-t-2`}
+                        className={`relative w-full h-[48%] bg-gradient-to-b ${card.frontGradient} p-6 flex flex-col justify-center items-center text-center text-white border-t-2`}
                         style={{ borderTopColor: `${card.frontAccentLine}60` }}
                       >
                         <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-tight drop-shadow-sm">
@@ -651,13 +652,9 @@ export default function Home() {
 
                         {/* Elegant Accent Line */}
                         <div
-                          className="w-12 h-1 rounded-full my-2.5"
+                          className="w-12 h-1 rounded-full mt-3"
                           style={{ backgroundColor: card.frontAccentLine }}
                         />
-
-                        <p className="text-xs sm:text-[13px] text-slate-200 leading-relaxed font-normal">
-                          {card.frontDescription}
-                        </p>
                       </div>
                     </div>
 
@@ -734,6 +731,137 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* ========================================================================= */}
+      {/* 5. FOOTER SECTION (About Us & Contact on Left | 30 Cities in 3 Sub-Cols) */}
+      {/* ========================================================================= */}
+      <footer className="relative w-full text-white select-none overflow-hidden bg-slate-950 border-t border-slate-800">
+        {/* Background Image with Dark Vignette/Overlay matching screenshot */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src={footerData.bgImage}
+            alt="Career Consultancy Footer Background"
+            className="w-full h-full object-cover brightness-[0.22] contrast-125 filter blur-[0.5px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-slate-950/90" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            
+            {/* LEFT COLUMN: ABOUT US + CONTACT DETAILS (UNDERNEATH) */}
+            <div className="lg:col-span-4 flex flex-col justify-between">
+              {/* About Us */}
+              <div>
+                <div className="mb-4">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-tight border-b-2 border-white/60 pb-1.5 inline-block">
+                    {footerData.about.title}
+                  </h3>
+                </div>
+                <p className="text-slate-300 text-xs sm:text-[13px] leading-relaxed font-normal">
+                  {footerData.about.description}
+                </p>
+              </div>
+
+              {/* Contact Details Directly Underneath About Us (Only Mobile & Email) */}
+              <div className="mt-8 pt-6 border-t border-white/15">
+                <div className="mb-4">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-white tracking-tight border-b-2 border-white/60 pb-1 inline-block">
+                    {footerData.contact.title}
+                  </h3>
+                </div>
+
+                <ul className="space-y-3 text-xs sm:text-[13px] text-slate-200">
+                  {/* Phone Number Only */}
+                  <li className="flex items-center gap-2.5">
+                    <span className="text-[#a0c828] shrink-0">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                      </svg>
+                    </span>
+                    <a href={`tel:${footerData.contact.phoneRaw}`} className="hover:text-[#a0c828] transition-colors font-medium">
+                      {footerData.contact.phone}
+                    </a>
+                  </li>
+
+                  {/* Email Only */}
+                  <li className="flex items-center gap-2.5">
+                    <span className="text-[#a0c828] shrink-0">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                      </svg>
+                    </span>
+                    <a href={`mailto:${footerData.contact.email}`} className="hover:text-[#a0c828] transition-colors">
+                      {footerData.contact.email}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: OUR LOCATIONS (3 Sub-Columns: 10, 10, 10 Side by Side) */}
+            <div className="lg:col-span-8 flex flex-col">
+              <div className="flex items-center justify-center gap-3 mb-5">
+                <div className="h-[1px] bg-white/25 flex-1" />
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-tight whitespace-nowrap">
+                  {footerData.locations.title}
+                </h3>
+                <div className="h-[1px] bg-white/25 flex-1" />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 lg:gap-x-6 gap-y-1">
+                {/* Sub-Column 1: 10 Cities */}
+                <div className="space-y-1">
+                  {footerData.locations.columns[0].map((loc, idx) => (
+                    <Link
+                      key={idx}
+                      to={loc.path}
+                      className="flex items-center text-slate-300 hover:text-[#a0c828] text-xs sm:text-[13px] border-b border-dashed border-white/20 pb-1.5 transition-colors group"
+                    >
+                      <span className="text-white/80 group-hover:text-[#a0c828] font-bold mr-1.5 text-xs sm:text-sm">«</span>
+                      <span className="truncate">{loc.name}</span>
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Sub-Column 2: 10 Cities */}
+                <div className="space-y-1">
+                  {footerData.locations.columns[1].map((loc, idx) => (
+                    <Link
+                      key={idx}
+                      to={loc.path}
+                      className="flex items-center text-slate-300 hover:text-[#a0c828] text-xs sm:text-[13px] border-b border-dashed border-white/20 pb-1.5 transition-colors group"
+                    >
+                      <span className="text-white/80 group-hover:text-[#a0c828] font-bold mr-1.5 text-xs sm:text-sm">«</span>
+                      <span className="truncate">{loc.name}</span>
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Sub-Column 3: 10 Cities */}
+                <div className="space-y-1">
+                  {footerData.locations.columns[2].map((loc, idx) => (
+                    <Link
+                      key={idx}
+                      to={loc.path}
+                      className="flex items-center text-slate-300 hover:text-[#a0c828] text-xs sm:text-[13px] border-b border-dashed border-white/20 pb-1.5 transition-colors group"
+                    >
+                      <span className="text-white/80 group-hover:text-[#a0c828] font-bold mr-1.5 text-xs sm:text-sm">«</span>
+                      <span className="truncate">{loc.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Copyright */}
+          <div className="mt-10 pt-4 border-t border-white/10 text-center text-[11px] sm:text-xs text-slate-400">
+            <p>{footerData.copyright}</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

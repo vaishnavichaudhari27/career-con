@@ -2,11 +2,11 @@
 // HOME PAGE CONSOLIDATED DATA (homeData.js)
 // ==========================================
 
-// 1. Hero Section Carousel Slides (Full-frame Landscape Images, perfectly centered)
+// 1. Hero Section Carousel Slides (Indian Corporate Professionals & Mentorship)
 export const heroCarouselSlides = [
   {
     id: 1,
-    image: 'https://media.istockphoto.com/id/1827291486/photo/a-dedicated-mentor-is-explaining-mentees-importance-of-project-while-sitting-at-the-boardroom.jpg?s=612x612&w=0&k=20&c=whMTmOCyOUfNqoNBe8GPlmcNUM-aCfqD-0whdFPQpO4=',
+    image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=1200&q=80',
     tag: 'Career Growth & Advisory',
     title: 'Accelerate Your Next Career Milestone',
     description: '100% Genuine work experience certificates & professional documentation compliant with top MNC background verification.',
@@ -14,7 +14,7 @@ export const heroCarouselSlides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
     tag: 'Global Visa Assistance',
     title: 'Apostille & Embassy-Grade Visa Documentation',
     description: 'End-to-end visa paperwork for work, permanent residency, and study permits verified for USA, UK, Canada & Europe.',
@@ -30,7 +30,7 @@ export const heroCarouselSlides = [
   },
   {
     id: 4,
-    image: 'https://img.magnific.com/free-photo/business-meeting-office_1268-21523.jpg?semt=ais_hybrid&w=740&q=80',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80',
     tag: 'Verification Shield',
     title: 'Telephonic & Official Email Verification',
     description: 'Active HR domain email verification and dedicated telephonic BGC response support across 30+ Indian commercial hubs.',
@@ -38,7 +38,7 @@ export const heroCarouselSlides = [
   },
   {
     id: 5,
-    image: 'https://thumbs.dreamstime.com/b/group-businesspeople-having-meeting-office-lobby-overhead-view-discussion-37223778.jpg?w=992',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
     tag: 'Trusted Nationwide',
     title: 'Proven Credibility for 12+ Years',
     description: 'Empowering ambitious professionals across Bengaluru, Hyderabad, Pune, Mumbai, Gurugram, Noida, and 24 other cities.',
@@ -82,12 +82,12 @@ export const aboutSectionData = {
     text: 'Read More',
     link: '/why-us',
   },
-  // Perfectly centered, wide corporate images
+  // Indian corporate & engineering teams
   carouselImages: [
     {
       id: 1,
-      url: 'https://thumbs.dreamstime.com/b/group-businesspeople-having-meeting-office-lobby-overhead-view-discussion-37223778.jpg?w=992',
-      alt: 'Professional Career Counseling Session',
+      url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80',
+      alt: 'Indian Professional Career Counseling Session',
       caption: 'Expert Career Guidance & Corporate Mentorship',
     },
     {
@@ -104,7 +104,7 @@ export const aboutSectionData = {
     },
     {
       id: 4,
-      url: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80',
+      url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
       alt: 'Successful Job Placement Candidate',
       caption: 'Celebrating 14,800+ Placed Careers',
     },
@@ -127,8 +127,9 @@ export const aboutSectionData = {
       caption: 'Top MNC Background Verification Compliance',
     },
   ],
+  // Indian professional candidate
   staticFeature: {
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
     alt: 'Career Consultancy Student and Candidate Success',
     badgeText: 'Priority Placement Drive',
     highlightText: '100% Verified',
@@ -146,12 +147,10 @@ export const servicesSectionData = {
       id: 'experience-certificate',
       title: 'Experience Certificate',
       path: '/services/experience-certificate',
-      frontImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
-      frontDescription: 'Collaborate Consulting exists to find the place where disparate career aspirations meet verified corporate authenticity.',
+      frontImage: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=800&q=80',
       backTitle: 'Experience Certificate',
       backDescription:
         'Authorized employment credentials for IT & non-IT domains across India. Backed by active official HR domain email responses, landline verification, and full EPFO compliance. Our authenticated experience certifications ensure a 100% seamless transition through third-party background screening.',
-      // High-end Executive Color scheme for Card 1
       frontGradient: 'from-[#0b1f3a] via-[#09182d] to-[#050e1b]',
       frontAccentLine: '#38bdf8',
       backAccentGradient: 'from-blue-900 via-indigo-950 to-slate-950',
@@ -163,12 +162,10 @@ export const servicesSectionData = {
       id: 'visa-documentation',
       title: 'Visa Documentation',
       path: '/services/visa-documentation',
-      frontImage: 'https://media.istockphoto.com/id/1783635446/photo/visa-application-form.jpg?s=612x612&w=0&k=20&c=RWnFVTydHN2C8-fxumXIE27tU8a-YwKrnlClwbHkLUE=',
-      frontDescription: 'Visa Services technologies deliver the meticulous documentation you need to satisfy strict consular standards and fast-track approval.',
+      frontImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
       backTitle: 'Visa Documentation',
       backDescription:
         'Comprehensive, embassy-ready work and permanent residency paperwork prepared under strict international guidelines. Complete with apostille legalization, Ministry of External Affairs attestation, and certified financial proof dossiers for USA, UK, Canada, and Schengen zones.',
-      // High-end Executive Color scheme for Card 2
       frontGradient: 'from-[#08222d] via-[#061922] to-[#040f15]',
       frontAccentLine: '#2dd4bf',
       backAccentGradient: 'from-teal-800 via-cyan-950 to-slate-950',
@@ -181,11 +178,9 @@ export const servicesSectionData = {
       title: 'Real Time Project Training',
       path: '/services/real-time-projects-training',
       frontImage: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80',
-      frontDescription: 'Master live production codebases, enterprise system design, and hands-on technical interview defense led by industry architects.',
       backTitle: 'Real Time Project Training',
       backDescription:
         'Bridge the gap between theoretical knowledge and real enterprise execution. Work directly on production codebases, microservices architectures, cloud CI/CD pipelines, and defend complex software architectures with full confidence in technical rounds.',
-      // High-end Executive Color scheme for Card 3
       frontGradient: 'from-[#1c173b] via-[#14102c] to-[#0c0a1b]',
       frontAccentLine: '#c084fc',
       backAccentGradient: 'from-purple-900 via-violet-950 to-slate-950',
@@ -194,4 +189,65 @@ export const servicesSectionData = {
       btnText: 'Read More',
     },
   ],
+};
+
+// 5. Footer Section Data (Top 30 Indian Commercial Hubs divided in 10, 10, 10)
+export const footerData = {
+  bgImage: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80',
+  about: {
+    title: 'About Us',
+    description:
+      'Career Consultancy is an authorized service provider of Experience certificates, visa documentation, and real-time project training for all states in India. We are currently working with a large number of top-tier industries and companies, having a vast network of candidates from multi-sectors of multi-disciplines.',
+  },
+  contact: {
+    title: 'Contact Details',
+    phone: '+91 9028760099',
+    phoneRaw: '9028760099',
+    email: 'info@careerconsultancy.com',
+  },
+  locations: {
+    title: 'Our Locations',
+    columns: [
+      // Sub-Column 1: 10 Cities
+      [
+        { name: 'Experience Certificate in Bengaluru', path: '/location/bengaluru' },
+        { name: 'Experience Certificate in Hyderabad', path: '/location/hyderabad' },
+        { name: 'Experience Certificate in Pune', path: '/location/pune' },
+        { name: 'Experience Certificate in Chennai', path: '/location/chennai' },
+        { name: 'Experience Certificate in Gurugram', path: '/location/gurugram' },
+        { name: 'Experience Certificate in Noida', path: '/location/noida' },
+        { name: 'Experience Certificate in Mumbai', path: '/location/mumbai' },
+        { name: 'Experience Certificate in Kolkata', path: '/location/kolkata' },
+        { name: 'Experience Certificate in Ahmedabad', path: '/location/ahmedabad' },
+        { name: 'Experience Certificate in Kochi', path: '/location/kochi' },
+      ],
+      // Sub-Column 2: 10 Cities
+      [
+        { name: 'Experience Certificate in Thiruvananthapuram', path: '/location/thiruvananthapuram' },
+        { name: 'Experience Certificate in Coimbatore', path: '/location/coimbatore' },
+        { name: 'Experience Certificate in Jaipur', path: '/location/jaipur' },
+        { name: 'Experience Certificate in Indore', path: '/location/indore' },
+        { name: 'Experience Certificate in Bhubaneswar', path: '/location/bhubaneswar' },
+        { name: 'Experience Certificate in Chandigarh (Mohali)', path: '/location/chandigarh-mohali' },
+        { name: 'Experience Certificate in Gandhinagar', path: '/location/gandhinagar' },
+        { name: 'Experience Certificate in Visakhapatnam', path: '/location/visakhapatnam' },
+        { name: 'Experience Certificate in Nagpur', path: '/location/nagpur' },
+        { name: 'Experience Certificate in Lucknow', path: '/location/lucknow' },
+      ],
+      // Sub-Column 3: 10 Cities
+      [
+        { name: 'Experience Certificate in Mysore', path: '/location/mysore' },
+        { name: 'Experience Certificate in Vadodara', path: '/location/vadodara' },
+        { name: 'Experience Certificate in Surat', path: '/location/surat' },
+        { name: 'Experience Certificate in Mangaluru', path: '/location/mangaluru' },
+        { name: 'Experience Certificate in Tiruchirappalli', path: '/location/tiruchirappalli' },
+        { name: 'Experience Certificate in Nashik', path: '/location/nashik' },
+        { name: 'Experience Certificate in Bhopal', path: '/location/bhopal' },
+        { name: 'Experience Certificate in Madurai', path: '/location/madurai' },
+        { name: 'Experience Certificate in Vijayawada', path: '/location/vijayawada' },
+        { name: 'Experience Certificate in Kozhikode', path: '/location/kozhikode' },
+      ],
+    ],
+  },
+  copyright: '© 2026 Career Consultancy. All Rights Reserved. ISO 9001:2015 Certified Organization.',
 };
